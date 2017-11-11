@@ -16,5 +16,10 @@ pipeline {
         sh 'echo \'Deploying\''
       }
     }
+    stage('show env') {
+      steps {
+        sh 'env'
+      }
+    }
   }
 }
