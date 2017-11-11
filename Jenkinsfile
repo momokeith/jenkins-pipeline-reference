@@ -12,13 +12,11 @@ pipeline {
       }
     }
     stage('Deploy') {
+     when {
+         branch "master"
+      }
       steps {
         sh 'echo \'Deploying\''
-      }
-    }
-    stage('show env') {
-      steps {
-        sh 'env'
       }
     }
   }
